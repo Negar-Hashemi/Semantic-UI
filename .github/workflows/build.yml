@@ -30,11 +30,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install -g gulp --force
-          npm install -g gulp-cli
-          npm install
-
-
+          npm ci
+          npx gulp --version # Verify gulp is available
 
       - name: Testing on OS (${{ matrix.os }}) with Node.js (version ${{ matrix.node-version }}) attempt ${{ matrix.attempt }}
         run: |
